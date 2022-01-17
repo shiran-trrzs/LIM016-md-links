@@ -1,0 +1,2 @@
+
+mdLinks(path, options)

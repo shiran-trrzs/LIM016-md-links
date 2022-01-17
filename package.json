@@ -1,4 +1,29 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "md-blank-space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "jest --verbose --coverage"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "shiran_trrzs",
+  "license": "MIT",
+  "homepage": "http://",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiran-trrzs/LIM016-md-links"
+  },
+  "dependencies": {
+    "": "",
+    "axios": "^0.24.0",
+    "marked": "^4.0.8"
+  },
+  "bin": {},
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
 }
