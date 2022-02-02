@@ -97,6 +97,6 @@ describe ('getLinks', () => {
 
 describe('getStatusLinks', () => {
   it('Devuelve un array de objetos conteniendo href, text, file, status y ok/fail', () => {
-    expect(getStatusLinks(arrayDetailLinks)).resolves.toStrictEqual(arrayStatusLinks)
+    return expect(getStatusLinks(arrayDetailLinks)).resolves.toStrictEqual(arrayStatusLinks)
   })
 })

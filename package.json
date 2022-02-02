@@ -2,7 +2,7 @@
   "name": "md-blank-space",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "md-links.js",
   "scripts": {
     "dev": "node index.js",
     "test": "jest --verbose --coverage "
@@ -15,15 +15,17 @@
   "homepage": "http://",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shiran-trrzs/LIM016-md-links"
+    "url": "https://github.com/shiran-trrzs/LIM016-md-links"
   },
   "dependencies": {
     "": "",
     "axios": "^0.24.0",
-    "chalk": "^5.0.0",
+    "chalk": "^4.1.2",
     "marked": "^4.0.8"
   },
-  "bin": {},
+  "bin": {
+    "md-links": "cli.js" 
+  },
   "devDependencies": {
     "jest": "^27.4.3"
   }

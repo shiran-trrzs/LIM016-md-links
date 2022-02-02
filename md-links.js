@@ -21,8 +21,8 @@ const mdLinks = (path, options) => new Promise ((res, rej) => {
 })
 .then((res)=> res.map((prom)=> prom.value ? prom.value : prom))
 
-// mdLinks('carpeta-completa', {validate:false})
-// .then((res)=> console.log(res))
+mdLinks('carpeta-completa', {validate:true})
+.then((res)=> console.log(res))
 
 module.exports = {
     mdLinks
