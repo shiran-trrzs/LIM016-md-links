@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage "
   },
   "keywords": [
-    ""
+    "markdown"
   ],
   "author": "shiran_trrzs",
   "license": "MIT",
@@ -20,6 +20,7 @@
   "dependencies": {
     "": "",
     "axios": "^0.24.0",
+    "chalk": "^5.0.0",
     "marked": "^4.0.8"
   },
   "bin": {},

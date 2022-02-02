@@ -1,5 +1,4 @@
 const fs = require ('fs');
-const { resolve } = require('path');
 const path = require ('path');
 const marked = require ('marked');
 const axios = require ('axios');
@@ -7,8 +6,9 @@ const axios = require ('axios');
 const fileExist = (filePath) => fs.existsSync(filePath) //Devuelve booleano
 // console.log(fileExist('ABC.md'))
 
-const absoluteRoute = (filePath) => path.isAbsolute(filePath) ? (filePath) : path.resolve(filePath); //Devuelve ruta ahbs
-// console.log(routeAbsolute)
+const absoluteRoute = (filePath) => path.isAbsolute(filePath) ? (filePath) : path.resolve(filePath); //Devuelve ruta abs
+// console.log(absoluteRoute( 'file-existente.md'))
+// console.log(absoluteRoute('C:/Users/PC/LIM016-md-links/carpeta-con-links/carpeta-sin-links'))
 
 const isDirectory = (filePath) => fs.statSync(filePath).isDirectory();
 // console.log(isDirectory('./'))
@@ -59,7 +59,7 @@ const pathDirectory = (filePath) => {
     return onlyFileMd
   }
 
-  //console.log(pathDirectory('test'))
+  // console.log(pathDirectory('carpeta-completa'))
 
   const getLinks = (filePath) => {
     const renderer = new marked.Renderer() ;
@@ -69,8 +69,8 @@ const pathDirectory = (filePath) => {
       renderer.link = (href, title, text) => {
          let linksResult =  {
           href: href,
-          title: text,
-          text: file,
+          text: text,
+          file: file,
         } 
       allLinks.push(linksResult)
       }     
@@ -79,34 +79,41 @@ const pathDirectory = (filePath) => {
     })
     return allLinks
   }
-  // console.log(getLinks('ABC.md'))
+  
+  // console.log(getLinks('C:\\Users\\PC\\LIM016-md-links\\carpeta-completa\\carpeta-no-links\\file-sin-links.md'))
+  // console.log(getLinks('C:\\Users\\PC\\LIM016-md-links\\carpeta-completa\\file-con-links.md'))
 
 
 const getStatusLinks = (arrayLinks) => {
-  const getStatus = arrayLinks.map ((link) => 
-  axios.get(link)
+  const getStatus = arrayLinks.map ((link) => axios.get(link.href)
   .then((res) => {
     link.status = res.status,
     link.ok = (res.status >=200) && (res.status <= 399) ? 'ok' :'fail';
     return link
   })
   .catch((error) => {
+    // console.log(error.response.status)
     return  {
       href: link.href,
       text: link.text,
       file: link.file,
-      status: 'not found' + error,
+      status: error.response ? error.response.status : 'fail',
       ok: 'fail'
     }
   }));
   
- return Promise.allSettled(getStatus).then(res => console.log(res)).catch(error => console.log(error));
+ return Promise.allSettled(getStatus).catch(error => console.log(error));
 }
 
-console.log(getStatusLinks(getLinks('ABC.md')))
+// getStatusLinks(getLinks('C:\\Users\\PC\\LIM016-md-links\\carpeta-completa\\file-con-links.md')).then((res) => console.log(res))
 
 
 
-module.exports = () => {
-  // ...
+module.exports = {
+  fileExist,
+  absoluteRoute,
+  isDirectory,
+  pathDirectory,
+  getLinks,
+  getStatusLinks
 };
