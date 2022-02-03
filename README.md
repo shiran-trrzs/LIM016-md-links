@@ -92,4 +92,4 @@ Unique: 3
 
 #### `--help`
 
-![](images/help-message.jpg)
+![](./images/help-message.jpg)
