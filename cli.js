@@ -24,7 +24,7 @@ if (otherPath) {
     mdLinks(path, {validate:false})
     .then((res) => console.log(chalk.bgBlue.black(statsLinks(res))))
     .catch((rej) => console.log(chalk.redBright(rej)))
-} else if (validate && stats || stats && validate) {
+} else if ((validate && stats) || (stats && validate)) {
     mdLinks(path, {validate:true})
     .then((res) => {
         const total = console.log(chalk.bgBlue.black(statsLinks(res)))
@@ -35,3 +35,5 @@ if (otherPath) {
 } else {
     console.log(chalk.magenta(helpMessage))
 }
+
+// console.log(mdLinks('C:\\Users\\PC\\LIM016-md-links\\carpeta-completa').then((res) => console.log(res)))
