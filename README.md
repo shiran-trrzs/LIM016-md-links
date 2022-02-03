@@ -92,19 +92,4 @@ Unique: 3
 
 #### `--help`
 
-`
-                                        ▄▀▄     ▄▀▄
-                                       ▄█░░▀▀▀▀▀░░█▄
-                                   ▄▄  █░░░░░░░░░░░█  ▄▄
-                                  █▄▄█ █░░▀░░┬░░▀░░█ █▄▄█
-█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-█                                   ¿Necesitas ayuda?                                  █
-█ ██╗░░██╗███████╗██╗░░░░░██████╗░  Puedes usar los siguientes comandos:               █
-█ ██║░░██║██╔════╝██║░░░░░██╔══██╗  --validate: Retorna el href, text, file, status,   █   
-█ ███████║█████╗░░██║░░░░░██████╔╝                       ok o fail de cada link        █
-█ ██╔══██║██╔══╝░░██║░░░░░██╔═══╝░  --stats: Retorna el total de links y la cantidad   █
-█ ██║░░██║███████╗███████╗██║░░░░░           de links únicos (Unique)                  █ 
-█ ╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░  --stats --validate: Retorna el total y los         █ 
-█                                                         links rotos (Broken)         █
-█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-`
+![](images/help-message.jpg)
