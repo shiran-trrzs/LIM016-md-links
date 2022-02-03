@@ -1,11 +1,4 @@
-# Md Blank Space
-
-## Índice
-
-* [1. Preámbulo](#1-preámbulo)
-
-
-## MD BLANK SPACE BY SHIRAN
+# Md Blank Space by Shiran
 
 Md-blank-space es una libreria creada a partir de NodeJS, la cual va a verificar el estado de los links en archivos con lenguaje markdown.
 
