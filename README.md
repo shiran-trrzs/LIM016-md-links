@@ -117,7 +117,7 @@ Broken: 1
 
 ```
 
-### En caso de ausencia de links
+#### ❌ En caso de ausencia de links
 
 ```sh
                             ▄▀▄     ▄▀▄
@@ -134,7 +134,7 @@ Broken: 1
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 ```
 
-### En caso de ruta incorrecta
+#### ❌ En caso de ruta incorrecta
 
 ```sh
                             ▄▀▄     ▄▀▄
