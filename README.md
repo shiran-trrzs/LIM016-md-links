@@ -151,4 +151,5 @@ Broken: 1
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 ```
 
-📌 Realizado *[Shiran Olave Terrazas](https://www.linkedin.com/in/shiran-trrzs/)
+
+📌 Realizado [Shiran Olave Terrazas](https://www.linkedin.com/in/shiran-trrzs/)
