@@ -1,27 +1,28 @@
 {
   "name": "md-blank-space",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Md-blank-space es una libreria creada a partir de NodeJS, la cual va a verificar el estado de los links en archivos con lenguaje markdown.",
   "main": "md-links.js",
   "scripts": {
     "dev": "node index.js",
-    "test": "jest --verbose --coverage "
+    "test": "jest --verbose --coverage ",
+    "lint": "eslint"
   },
   "keywords": [
     "markdown"
   ],
   "author": "shiran_trrzs",
   "license": "MIT",
-  "homepage": "http://",
+  "homepage": "https://github.com/shiran-trrzs/LIM016-md-links",
   "repository": {
     "type": "git",
     "url": "https://github.com/shiran-trrzs/LIM016-md-links"
   },
   "dependencies": {
-    "": "",
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
-    "marked": "^4.0.8"
+    "marked": "^4.0.8",
+    "dep": "https://registry.npmjs.org/md-blank-space"
   },
   "bin": {
     "md-links": "cli.js"

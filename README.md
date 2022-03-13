@@ -83,6 +83,20 @@ Total: 3
 Unique: 3
 ```
 
+#### `--stats --validate`
+
+Si pasamos la opción `--stats --validate` el output (salida) será un texto con estadísticas
+básicas sobre los links y además un detalle de la cantidad de links rotos (broken).
+
+```sh
+$ md-links ./carpeta-completa --stats --validate
+Total: 3
+Unique: 3
+
+Broken: 1
+```
+
+
 #### `--help`
 
-![](images/help-message.png)
+![](./images/help-message.png)

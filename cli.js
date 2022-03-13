@@ -16,6 +16,13 @@ if (otherPath) {
     mdLinks(path, {validate:false})
     .then((res) => console.log(res))
     .catch((rej) => console.log(chalk.redBright(rej)))
+} else if (validate && stats) {
+    mdLinks(path, {validate:true})
+    .then((res) => {
+        console.log(chalk.bgBlue.black(statsLinks(res)))
+        console.log(chalk.bgRed.black(brokenLinks(res)))
+    })
+    .catch((rej) => console.log(chalk.red(rej)))
 } else if (validate) {
     mdLinks(path, {validate:true})
     .then((res) => console.log(res))
@@ -24,14 +31,6 @@ if (otherPath) {
     mdLinks(path, {validate:false})
     .then((res) => console.log(chalk.bgBlue.black(statsLinks(res))))
     .catch((rej) => console.log(chalk.redBright(rej)))
-} else if ((validate && stats) || (stats && validate)) {
-    mdLinks(path, {validate:true})
-    .then((res) => {
-        const total = console.log(chalk.bgBlue.black(statsLinks(res)))
-        const broken = console.log(chalk.bgRed.black(brokenLinks(res)))
-        return total && broken
-    })
-    .catch((rej) => console.log(chalk.red(rej)))
 } else {
     console.log(chalk.magenta(helpMessage))
 }

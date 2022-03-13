@@ -8,9 +8,9 @@ const statsLinks = (arr) => {
 }
 
 const brokenLinks = (arr) => {
-    const linkFilter = arr.filter((links) => links.message === 'fail');
-    return `Broken: ${linkFilter.length}
-    `
+    const linkFilter = arr.filter((links) => links.ok === 'fail');
+    return `
+    Broken: ${linkFilter.length}`
 }
 
 const helpMessage = `
